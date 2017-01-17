@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Dly-8v-Px6">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome-->
+        <scene sceneID="ziY-Ns-S5F">
+            <objects>
+                <viewController storyboardIdentifier="Welcome" title="Welcome" id="8QV-za-EyU" customClass="WelcomeViewController" customModule="Koupgon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="O0s-MG-PZr"/>
+                        <viewControllerLayoutGuide type="bottom" id="dht-tJ-MHZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pq2-Tj-HAR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqP-JI-TxS" customClass="Button" customModule="Koupgon" customModuleProvider="target">
+                                <rect key="frame" x="16" y="457" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UeP-fd-tjP"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabel" value="Sign up with email"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backdropColor">
+                                        <color key="value" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleSize">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hN-Pm-6JI" customClass="Button" customModule="Koupgon" customModuleProvider="target">
+                                <rect key="frame" x="16" y="527" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6Hi-xH-9Ll"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabel" value="Sign up with Facebook"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backdropColor">
+                                        <color key="value" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="iconImage" value="facebook"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleSize">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aup-fV-oLe" customClass="Button" customModule="Koupgon" customModuleProvider="target">
+                                <rect key="frame" x="16" y="597" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="U5H-yQ-AyP"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="titleLabel" value="Already saving? Sign in"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="titleColor">
+                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="titleSize">
+                                        <real key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="TAO-x8-DwG">
+                                <rect key="frame" x="93.5" y="156.5" width="187.5" height="187.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="TAO-x8-DwG" secondAttribute="height" multiplier="1:1" id="XH4-mL-3LB"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Koupgon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OH1-tW-hRT">
+                                <rect key="frame" x="126.5" y="65.5" width="123" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLD-jO-aZ7">
+                                <rect key="frame" x="329" y="20" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="1Yu-EO-f92"/>
+                                    <constraint firstAttribute="width" constant="30" id="iDf-0k-xJe"/>
+                                </constraints>
+                                <state key="normal" image="cross"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eLD-jO-aZ7" firstAttribute="top" secondItem="O0s-MG-PZr" secondAttribute="bottom" id="14u-fv-gtL"/>
+                            <constraint firstItem="9hN-Pm-6JI" firstAttribute="top" secondItem="lqP-JI-TxS" secondAttribute="bottom" constant="20" id="Bx4-aI-7sT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9hN-Pm-6JI" secondAttribute="trailing" id="G8C-Bx-McU"/>
+                            <constraint firstItem="TAO-x8-DwG" firstAttribute="centerY" secondItem="pq2-Tj-HAR" secondAttribute="centerY" multiplier="3:4" id="RXq-cY-ldl"/>
+                            <constraint firstItem="9hN-Pm-6JI" firstAttribute="leading" secondItem="pq2-Tj-HAR" secondAttribute="leadingMargin" id="VtF-jq-LER"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eLD-jO-aZ7" secondAttribute="trailing" id="a8N-fE-9Ro"/>
+                            <constraint firstItem="aup-fV-oLe" firstAttribute="top" secondItem="9hN-Pm-6JI" secondAttribute="bottom" constant="20" id="akx-vd-ZhE"/>
+                            <constraint firstItem="aup-fV-oLe" firstAttribute="leading" secondItem="pq2-Tj-HAR" secondAttribute="leadingMargin" id="ggV-XS-we3"/>
+                            <constraint firstItem="lqP-JI-TxS" firstAttribute="leading" secondItem="pq2-Tj-HAR" secondAttribute="leadingMargin" id="hYg-Pd-pE6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aup-fV-oLe" secondAttribute="trailing" id="hps-aP-Nda"/>
+                            <constraint firstItem="OH1-tW-hRT" firstAttribute="centerY" secondItem="pq2-Tj-HAR" secondAttribute="centerY" multiplier="1:4" id="im4-aD-5RW"/>
+                            <constraint firstItem="dht-tJ-MHZ" firstAttribute="top" secondItem="aup-fV-oLe" secondAttribute="bottom" constant="20" id="m2p-QF-87v"/>
+                            <constraint firstItem="OH1-tW-hRT" firstAttribute="centerX" secondItem="pq2-Tj-HAR" secondAttribute="centerX" id="pLI-Jk-99l"/>
+                            <constraint firstItem="TAO-x8-DwG" firstAttribute="centerX" secondItem="pq2-Tj-HAR" secondAttribute="centerX" id="qLz-uD-Pa2"/>
+                            <constraint firstItem="TAO-x8-DwG" firstAttribute="width" secondItem="pq2-Tj-HAR" secondAttribute="width" multiplier="1:2" id="wEE-mG-J9S"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lqP-JI-TxS" secondAttribute="trailing" id="yPz-Jy-nYR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cet-9Q-olR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="-640.02998500749629"/>
+        </scene>
+        <!--Browse-->
+        <scene sceneID="P9z-qL-Vg4">
+            <objects>
+                <tableViewController storyboardIdentifier="Browse" title="Browse" id="6SV-Zn-Vnf" customClass="BrowseTableViewController" customModule="Koupgon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1IE-3M-irE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yxw-qx-tfH">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yxw-qx-tfH" id="Ksn-Iq-SXj">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="6SV-Zn-Vnf" id="f6w-ev-n2Y"/>
+                            <outlet property="delegate" destination="6SV-Zn-Vnf" id="lcq-k1-6N6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="5dm-g3-iWc"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TvQ-hp-7Wv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="771" y="36"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="mSY-cs-Agy">
+            <objects>
+                <viewController storyboardIdentifier="Detail" title="Detail" id="e4B-mR-YlC" customClass="DetailViewController" customModule="Koupgon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8bE-Bh-ucy"/>
+                        <viewControllerLayoutGuide type="bottom" id="2vG-hN-IBT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mhL-DX-fGH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F5s-E8-gKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1508" y="36"/>
+        </scene>
+        <!--Store-->
+        <scene sceneID="ziA-9P-ICz">
+            <objects>
+                <viewController storyboardIdentifier="Store" title="Store" id="flB-y4-d9L" customClass="StoreTableViewController" customModule="Koupgon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tqC-Xr-Pp4"/>
+                        <viewControllerLayoutGuide type="bottom" id="Bpc-9y-s6v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ca2-Fm-VEE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KP5-gh-cPS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="782" y="-640"/>
+        </scene>
+        <!--MainNav-->
+        <scene sceneID="jYk-0e-mdp">
+            <objects>
+                <navigationController storyboardIdentifier="MainNav" title="MainNav" automaticallyAdjustsScrollViewInsets="NO" id="Dly-8v-Px6" customClass="MainNavigationController" customModule="Koupgon" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pl7-Si-fBL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6SV-Zn-Vnf" kind="relationship" relationship="rootViewController" id="p4k-Vz-1lH"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yhe-wT-H1V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33" y="37"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="512" height="512"/>
+        <image name="cross" width="128" height="128"/>
+        <image name="facebook" width="128" height="128"/>
+    </resources>
+</document>
