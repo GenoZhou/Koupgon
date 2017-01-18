@@ -74,6 +74,15 @@ struct StoryboardScene {
       return vc
     }
 
+    case StoreScene = "Store"
+    static func instantiateStore() -> StoreTableViewController {
+      guard let vc = StoryboardScene.Main.StoreScene.viewController() as? StoreTableViewController
+      else {
+        fatalError("ViewController 'Store' is not of the expected class StoreTableViewController.")
+      }
+      return vc
+    }
+
     case WelcomeScene = "Welcome"
     static func instantiateWelcome() -> WelcomeViewController {
       guard let vc = StoryboardScene.Main.WelcomeScene.viewController() as? WelcomeViewController

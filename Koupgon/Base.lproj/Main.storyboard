@@ -259,35 +259,6 @@
             </objects>
             <point key="canvasLocation" x="1511" y="-640"/>
         </scene>
-        <!--Browse-->
-        <scene sceneID="P9z-qL-Vg4">
-            <objects>
-                <tableViewController storyboardIdentifier="Browse" title="Browse" id="6SV-Zn-Vnf" customClass="BrowseTableViewController" customModule="Koupgon" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1IE-3M-irE">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="yxw-qx-tfH">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yxw-qx-tfH" id="Ksn-Iq-SXj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="6SV-Zn-Vnf" id="f6w-ev-n2Y"/>
-                            <outlet property="delegate" destination="6SV-Zn-Vnf" id="lcq-k1-6N6"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Browse" id="5dm-g3-iWc"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="TvQ-hp-7Wv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="41" y="50"/>
-        </scene>
     </scenes>
     <resources>
         <image name="Logo" width="512" height="512"/>

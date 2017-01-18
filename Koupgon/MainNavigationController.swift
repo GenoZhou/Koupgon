@@ -16,26 +16,32 @@ class MainNavigationController: UINavigationController, WelcomeViewControllerDel
         view.backgroundColor = .white
 
         // Jump to Browse if logged in
-        ((FIRAuth.auth()?.currentUser) != nil) ? jumpToBrowse() : jumpToWelcome()
+        ((FIRAuth.auth()?.currentUser) != nil) ? welcome() : welcomeBack()
     }
     
     // MARK: - Private Methods
     
-    private func jumpToWelcome() {
-        let welcomeVC = StoryboardScene.Main.instantiateWelcome()
-        welcomeVC.delegate = self
-        setViewControllers([welcomeVC], animated: false)
+    private func welcome() {
+        let targetVC = StoryboardScene.Main.instantiateWelcome()
+        targetVC.delegate = self
+        setViewControllers([targetVC], animated: false)
     }
     
-    private func jumpToBrowse() {
-        let browseVC = StoryboardScene.Main.instantiateBrowse()
-        setViewControllers([browseVC], animated: true)
+    private func welcomeBack() {
+        let key: UserDefaultKey = .defaultStoreId
+        if let storeId = UserDefaults.standard.string(forKey: key.rawValue) {
+            let targetVC = BrowseTableViewController(storeId: storeId)
+            setViewControllers([targetVC], animated: true)
+        } else {
+            let targetVC = StoreTableViewController()
+            setViewControllers([targetVC], animated: true)
+        }
     }
     
     // MARK: - WelcomeViewControllerDelegate
     
     func willDismiss() {
-        jumpToBrowse()
+        welcomeBack()
     }
 
 }

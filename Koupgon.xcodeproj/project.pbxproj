@@ -25,6 +25,8 @@
 		750864851E2FFE5000D891E1 /* Checkbox.xib in Resources */ = {isa = PBXBuildFile; fileRef = 750864841E2FFE5000D891E1 /* Checkbox.xib */; };
 		750864871E3006DB00D891E1 /* SigninViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750864861E3006DB00D891E1 /* SigninViewController.swift */; };
 		750864891E30079000D891E1 /* AuthNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750864881E30078F00D891E1 /* AuthNavigationController.swift */; };
+		7508648C1E301FBD00D891E1 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7508648B1E301FBD00D891E1 /* Store.swift */; };
+		7508648F1E30210500D891E1 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7508648E1E30210500D891E1 /* Global.swift */; };
 		7587A1B51E2EAC7800F0C6F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7587A1B41E2EAC7800F0C6F2 /* AppDelegate.swift */; };
 		7587A1B71E2EAC7800F0C6F2 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7587A1B61E2EAC7800F0C6F2 /* WelcomeViewController.swift */; };
 		7587A1BA1E2EAC7800F0C6F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7587A1B81E2EAC7800F0C6F2 /* Main.storyboard */; };
@@ -77,6 +79,8 @@
 		750864841E2FFE5000D891E1 /* Checkbox.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Checkbox.xib; sourceTree = "<group>"; };
 		750864861E3006DB00D891E1 /* SigninViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewController.swift; sourceTree = "<group>"; };
 		750864881E30078F00D891E1 /* AuthNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthNavigationController.swift; sourceTree = "<group>"; };
+		7508648B1E301FBD00D891E1 /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		7508648E1E30210500D891E1 /* Global.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		7587A1B11E2EAC7800F0C6F2 /* Koupgon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Koupgon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7587A1B41E2EAC7800F0C6F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7587A1B61E2EAC7800F0C6F2 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -137,11 +141,12 @@
 			name = UI;
 			sourceTree = "<group>";
 		};
-		7508648A1E3007A100D891E1 /* Auth */ = {
+		7508648D1E301FC300D891E1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7508648B1E301FBD00D891E1 /* Store.swift */,
 			);
-			name = Auth;
+			name = Model;
 			sourceTree = "<group>";
 		};
 		7587A1A81E2EAC7800F0C6F2 = {
@@ -169,9 +174,10 @@
 		7587A1B31E2EAC7800F0C6F2 /* Koupgon */ = {
 			isa = PBXGroup;
 			children = (
+				7508648D1E301FC300D891E1 /* Model */,
 				7508647D1E2EBCC700D891E1 /* UI */,
-				7508648A1E3007A100D891E1 /* Auth */,
 				091603B81E2F4196009AE225 /* AuthViewControllerType.swift */,
+				7508648E1E30210500D891E1 /* Global.swift */,
 				7587A1B61E2EAC7800F0C6F2 /* WelcomeViewController.swift */,
 				750864881E30078F00D891E1 /* AuthNavigationController.swift */,
 				091603B61E2F4175009AE225 /* SignupViewController.swift */,
@@ -523,6 +529,7 @@
 				750864871E3006DB00D891E1 /* SigninViewController.swift in Sources */,
 				7587A1B71E2EAC7800F0C6F2 /* WelcomeViewController.swift in Sources */,
 				750864741E2EB96E00D891E1 /* DetailViewController.swift in Sources */,
+				7508648C1E301FBD00D891E1 /* Store.swift in Sources */,
 				091603B71E2F4175009AE225 /* SignupViewController.swift in Sources */,
 				091603BB1E2F4597009AE225 /* TextField.swift in Sources */,
 				091603B91E2F4196009AE225 /* AuthViewControllerType.swift in Sources */,
@@ -534,6 +541,7 @@
 				750864831E2FFE3600D891E1 /* Checkbox.swift in Sources */,
 				750864891E30079000D891E1 /* AuthNavigationController.swift in Sources */,
 				7508647C1E2EBCC300D891E1 /* Button.swift in Sources */,
+				7508648F1E30210500D891E1 /* Global.swift in Sources */,
 				750864761E2EBA4000D891E1 /* StoreTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
