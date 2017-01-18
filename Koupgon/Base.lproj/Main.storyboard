@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D30a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Dly-8v-Px6">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -149,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cet-9Q-olR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="-640.02998500749629"/>
+            <point key="canvasLocation" x="42" y="-640"/>
         </scene>
         <!--Sign Up-->
         <scene sceneID="Tba-PP-tJf">
@@ -163,9 +163,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RsP-Sv-N3B" customClass="TextField" customModule="Koupgon" customModuleProvider="target">
-                                <rect key="frame" x="16" y="91" width="343" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RsP-Sv-N3B" customClass="TextField" customModule="Koupgon" customModuleProvider="target">
+                                <rect key="frame" x="16" y="96" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="69o-n5-TGn"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="labelColor">
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -180,9 +182,11 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="labelType" value="email"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i00-qE-L16" customClass="TextField" customModule="Koupgon" customModuleProvider="target">
-                                <rect key="frame" x="16" y="176" width="343" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i00-qE-L16" customClass="TextField" customModule="Koupgon" customModuleProvider="target">
+                                <rect key="frame" x="16" y="168" width="343" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="fKz-JA-Iya"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="labelColor">
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -197,14 +201,63 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="labelType" value="password"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I acknowledge." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYE-W1-JJx">
+                                <rect key="frame" x="130" y="272" width="115" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDR-zM-wWD" customClass="Checkbox" customModule="Koupgon" customModuleProvider="target">
+                                <rect key="frame" x="53" y="260" width="45" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="45" id="C3X-XR-NYz"/>
+                                    <constraint firstAttribute="height" constant="45" id="RRL-hs-Xm1"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="checkbox"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="i00-qE-L16" secondAttribute="leading" id="2UG-he-nWK"/>
+                            <constraint firstItem="RsP-Sv-N3B" firstAttribute="trailing" secondItem="OUV-wQ-UDy" secondAttribute="trailingMargin" id="3sv-BC-F3V"/>
+                            <constraint firstItem="TYE-W1-JJx" firstAttribute="top" secondItem="i00-qE-L16" secondAttribute="bottom" constant="64" id="5Qe-r7-8s3"/>
+                            <constraint firstItem="i00-qE-L16" firstAttribute="top" secondItem="RsP-Sv-N3B" secondAttribute="bottom" constant="32" id="7pj-17-Dps"/>
+                            <constraint firstItem="TYE-W1-JJx" firstAttribute="leading" secondItem="IDR-zM-wWD" secondAttribute="trailing" constant="32" id="QwD-ut-wMS"/>
+                            <constraint firstItem="IDR-zM-wWD" firstAttribute="centerY" secondItem="TYE-W1-JJx" secondAttribute="centerY" id="VHt-Em-bpq"/>
+                            <constraint firstItem="TYE-W1-JJx" firstAttribute="centerX" secondItem="OUV-wQ-UDy" secondAttribute="centerX" id="Y5d-LQ-igS"/>
+                            <constraint firstItem="RsP-Sv-N3B" firstAttribute="leading" secondItem="OUV-wQ-UDy" secondAttribute="leadingMargin" id="YZS-Pb-JVK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="i00-qE-L16" secondAttribute="trailing" id="be3-p2-zfT"/>
+                            <constraint firstItem="RsP-Sv-N3B" firstAttribute="top" secondItem="8bm-8U-YeJ" secondAttribute="bottom" constant="32" id="lo7-At-uYK"/>
+                        </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FxS-DE-S7z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="768.79999999999995" y="-640.02998500749629"/>
+        </scene>
+        <!--Sign In-->
+        <scene sceneID="M3o-UE-Elm">
+            <objects>
+                <viewController storyboardIdentifier="Signin" title="Sign In" id="rO0-Hk-BAK" customClass="SigninViewController" customModule="Koupgon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xqW-Jy-mQ6"/>
+                        <viewControllerLayoutGuide type="bottom" id="a8m-MQ-tuq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="cXp-dB-1tB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vRV-7x-d0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1511" y="-640"/>
         </scene>
         <!--Browse-->
         <scene sceneID="P9z-qL-Vg4">
@@ -219,7 +272,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="yxw-qx-tfH" id="Ksn-Iq-SXj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -233,29 +286,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TvQ-hp-7Wv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771" y="36"/>
-        </scene>
-        <!--MainNav-->
-        <scene sceneID="jYk-0e-mdp">
-            <objects>
-                <navigationController storyboardIdentifier="MainNav" title="MainNav" automaticallyAdjustsScrollViewInsets="NO" id="Dly-8v-Px6" customClass="MainNavigationController" customModule="Koupgon" customModuleProvider="target" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pl7-Si-fBL">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="6SV-Zn-Vnf" kind="relationship" relationship="rootViewController" id="p4k-Vz-1lH"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yhe-wT-H1V" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="33" y="37"/>
+            <point key="canvasLocation" x="41" y="50"/>
         </scene>
     </scenes>
     <resources>
         <image name="Logo" width="512" height="512"/>
+        <image name="checkbox" width="30" height="30"/>
         <image name="facebook" width="128" height="128"/>
     </resources>
 </document>

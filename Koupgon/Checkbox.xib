@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Checkbox" customModule="Koupgon" customModuleProvider="target">
+            <connections>
+                <outlet property="backdrop" destination="yqo-4W-DWL" id="r0I-1x-DL0"/>
+                <outlet property="icon" destination="3XI-GI-stS" id="Vm5-f4-0aJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view userInteractionEnabled="NO" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yqo-4W-DWL">
+                    <rect key="frame" x="2" y="2" width="46" height="46"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3XI-GI-stS">
+                            <rect key="frame" x="0.0" y="0.0" width="46" height="46"/>
+                        </imageView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="3XI-GI-stS" secondAttribute="bottom" id="ZUy-zf-9X7"/>
+                        <constraint firstItem="3XI-GI-stS" firstAttribute="top" secondItem="yqo-4W-DWL" secondAttribute="top" id="Zwz-hN-UDW"/>
+                        <constraint firstAttribute="trailing" secondItem="3XI-GI-stS" secondAttribute="trailing" id="qLE-yW-czq"/>
+                        <constraint firstItem="3XI-GI-stS" firstAttribute="leading" secondItem="yqo-4W-DWL" secondAttribute="leading" id="vHQ-2R-43o"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="yqo-4W-DWL" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="2" id="2ci-4F-1pL"/>
+                <constraint firstItem="yqo-4W-DWL" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="2" id="TNj-Wd-hRp"/>
+                <constraint firstAttribute="bottom" secondItem="yqo-4W-DWL" secondAttribute="bottom" constant="2" id="c3s-Pk-xCx"/>
+                <constraint firstAttribute="trailing" secondItem="yqo-4W-DWL" secondAttribute="trailing" constant="2" id="d3K-pM-62v"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+        </view>
+    </objects>
+</document>

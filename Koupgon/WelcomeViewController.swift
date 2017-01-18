@@ -32,7 +32,8 @@ class WelcomeViewController: UIViewController, AuthViewControllerType {
     
     @IBAction func emailSignupButtonTapped(_ sender: Any) {
         let signupVC = StoryboardScene.Main.instantiateSignup()
-        present(signupVC, animated: true, completion: nil)
+        let authNav = AuthNavigationController(rootViewController: signupVC)
+        present(authNav, animated: true, completion: nil)
     }
     
     @IBAction func facebookSignupButtonTapped(_ sender: Any) {
@@ -42,7 +43,9 @@ class WelcomeViewController: UIViewController, AuthViewControllerType {
     }
     
     @IBAction func signinButtonTapped(_ sender: Any) {
-        
+        let signinVC = StoryboardScene.Main.instantiateSignin()
+        let authNav = AuthNavigationController(rootViewController: signinVC)
+        present(authNav, animated: true, completion: nil)
     }
     
     @IBAction func dismissButtonTapped(_ sender: Any) {

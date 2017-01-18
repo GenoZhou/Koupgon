@@ -13,6 +13,7 @@ class MainNavigationController: UINavigationController, WelcomeViewControllerDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
 
         // Jump to Browse if logged in
         ((FIRAuth.auth()?.currentUser) != nil) ? jumpToBrowse() : jumpToWelcome()

@@ -3,10 +3,6 @@
 import Foundation
 import UIKit
 
-// swiftlint:disable file_length
-// swiftlint:disable line_length
-// swiftlint:disable type_body_length
-
 protocol StoryboardSceneType {
   static var storyboardName: String { get }
 }
@@ -41,6 +37,9 @@ extension UIViewController {
   }
 }
 
+// swiftlint:disable file_length
+// swiftlint:disable type_body_length
+
 struct StoryboardScene {
   enum LaunchScreen: StoryboardSceneType {
     static let storyboardName = "LaunchScreen"
@@ -48,45 +47,38 @@ struct StoryboardScene {
   enum Main: String, StoryboardSceneType {
     static let storyboardName = "Main"
 
-    static func initialViewController() -> Koupgon.MainNavigationController {
-      guard let vc = storyboard().instantiateInitialViewController() as? Koupgon.MainNavigationController else {
-        fatalError("Failed to instantiate initialViewController for \(self.storyboardName)")
-      }
-      return vc
-    }
-
     case BrowseScene = "Browse"
-    static func instantiateBrowse() -> Koupgon.BrowseTableViewController {
-      guard let vc = StoryboardScene.Main.BrowseScene.viewController() as? Koupgon.BrowseTableViewController
+    static func instantiateBrowse() -> BrowseTableViewController {
+      guard let vc = StoryboardScene.Main.BrowseScene.viewController() as? BrowseTableViewController
       else {
-        fatalError("ViewController 'Browse' is not of the expected class Koupgon.BrowseTableViewController.")
+        fatalError("ViewController 'Browse' is not of the expected class BrowseTableViewController.")
       }
       return vc
     }
 
-    case MainNavScene = "MainNav"
-    static func instantiateMainNav() -> Koupgon.MainNavigationController {
-      guard let vc = StoryboardScene.Main.MainNavScene.viewController() as? Koupgon.MainNavigationController
+    case SigninScene = "Signin"
+    static func instantiateSignin() -> SigninViewController {
+      guard let vc = StoryboardScene.Main.SigninScene.viewController() as? SigninViewController
       else {
-        fatalError("ViewController 'MainNav' is not of the expected class Koupgon.MainNavigationController.")
+        fatalError("ViewController 'Signin' is not of the expected class SigninViewController.")
       }
       return vc
     }
 
     case SignupScene = "Signup"
-    static func instantiateSignup() -> Koupgon.SignupViewController {
-      guard let vc = StoryboardScene.Main.SignupScene.viewController() as? Koupgon.SignupViewController
+    static func instantiateSignup() -> SignupViewController {
+      guard let vc = StoryboardScene.Main.SignupScene.viewController() as? SignupViewController
       else {
-        fatalError("ViewController 'Signup' is not of the expected class Koupgon.SignupViewController.")
+        fatalError("ViewController 'Signup' is not of the expected class SignupViewController.")
       }
       return vc
     }
 
     case WelcomeScene = "Welcome"
-    static func instantiateWelcome() -> Koupgon.WelcomeViewController {
-      guard let vc = StoryboardScene.Main.WelcomeScene.viewController() as? Koupgon.WelcomeViewController
+    static func instantiateWelcome() -> WelcomeViewController {
+      guard let vc = StoryboardScene.Main.WelcomeScene.viewController() as? WelcomeViewController
       else {
-        fatalError("ViewController 'Welcome' is not of the expected class Koupgon.WelcomeViewController.")
+        fatalError("ViewController 'Welcome' is not of the expected class WelcomeViewController.")
       }
       return vc
     }
