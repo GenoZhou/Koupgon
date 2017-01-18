@@ -7,31 +7,34 @@
 //
 
 import UIKit
+import Firebase
 
-class MainNavigationController: UINavigationController {
+class MainNavigationController: UINavigationController, WelcomeViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // check login status
-        let welcomeVC = StoryboardScene.Main.instantiateWelcome()
-        setViewControllers([welcomeVC], animated: false)
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        // Jump to Browse if logged in
+        ((FIRAuth.auth()?.currentUser) != nil) ? jumpToBrowse() : jumpToWelcome()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - Private Methods
+    
+    private func jumpToWelcome() {
+        let welcomeVC = StoryboardScene.Main.instantiateWelcome()
+        welcomeVC.delegate = self
+        setViewControllers([welcomeVC], animated: false)
     }
-    */
+    
+    private func jumpToBrowse() {
+        let browseVC = StoryboardScene.Main.instantiateBrowse()
+        setViewControllers([browseVC], animated: true)
+    }
+    
+    // MARK: - WelcomeViewControllerDelegate
+    
+    func willDismiss() {
+        jumpToBrowse()
+    }
 
 }

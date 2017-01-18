@@ -69,4 +69,9 @@ class Button: IBDesignableControl {
             icon.image = image
         }
     }
+    
+    override func awakeFromNib() {
+        self.subviews.forEach { $0.isUserInteractionEnabled = false }
+    }
+    
 }

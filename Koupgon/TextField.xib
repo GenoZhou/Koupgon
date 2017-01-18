@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D30a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TextField" customModule="Koupgon" customModuleProvider="target">
+            <connections>
+                <outlet property="label" destination="3an-2z-H5V" id="qOA-KZ-0pD"/>
+                <outlet property="underline" destination="DAT-Kd-BWU" id="s3O-Tv-Rt4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Placeholder" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3an-2z-H5V">
+                    <rect key="frame" x="8" y="8" width="359" height="56"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DAT-Kd-BWU">
+                    <rect key="frame" x="0.0" y="71" width="375" height="1"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="HdP-v5-Ef2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="3an-2z-H5V" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="topMargin" id="4ud-OL-kp5"/>
+                <constraint firstAttribute="trailingMargin" secondItem="3an-2z-H5V" secondAttribute="trailing" id="DVx-av-mcR"/>
+                <constraint firstItem="3an-2z-H5V" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="QOH-CB-bNC"/>
+                <constraint firstAttribute="bottom" secondItem="DAT-Kd-BWU" secondAttribute="bottom" id="T7I-zt-9Ko"/>
+                <constraint firstAttribute="bottomMargin" secondItem="3an-2z-H5V" secondAttribute="bottom" id="Z96-Vg-onA"/>
+                <constraint firstItem="DAT-Kd-BWU" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ox1-Tr-WaY"/>
+                <constraint firstAttribute="trailing" secondItem="DAT-Kd-BWU" secondAttribute="trailing" id="rhn-Ie-u94"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-15.5" y="-58"/>
+        </view>
+    </objects>
+</document>

@@ -1,14 +1,14 @@
 //
-//  AuthViewController.swift
+//  SignupViewController.swift
 //  Koupgon
 //
-//  Created by Mobile on 2017-01-17.
+//  Created by GenoZhou on 2017-01-18.
 //  Copyright © 2017 genozhou. All rights reserved.
 //
 
 import UIKit
 
-class AuthViewController: UIViewController {
+class SignupViewController: UIViewController, AuthViewControllerType {
 
     override func viewDidLoad() {
         super.viewDidLoad()

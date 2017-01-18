@@ -32,7 +32,7 @@ extension IBDesignable where Self: UIView {
         return nib.instantiate(withOwner: self, options: nil).first as! UIView
     }
     
-    fileprivate func xibSetup() {
+    public func xibSetup() {
         let view = loadViewFromNib()
         view.frame = bounds
         view.autoresizingMask = [UIViewAutoresizing.flexibleWidth, UIViewAutoresizing.flexibleHeight]
