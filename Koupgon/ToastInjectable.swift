@@ -34,7 +34,7 @@ extension ToastInjectable where Self: UIViewController {
             toast.backgroundColor = .red
         }
         
-        let time: TimeInterval = 2.0
+        let time: TimeInterval = 2.5
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + time) { 
             toast.removeFromSuperview()
         }

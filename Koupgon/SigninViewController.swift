@@ -63,6 +63,7 @@ class SigninViewController: UIViewController, AuthInjectable, ToastInjectable, U
     }
     
     @IBAction func resetPasswordButtonTapped(_ sender: Any) {
+        guard !emailField.label.text!.isEmpty else { showToast(withText: "Email Required", type: .warning); return }
         resetPassword(with: emailField.label.text!) {
             completed in
             if completed {
@@ -83,6 +84,14 @@ class SigninViewController: UIViewController, AuthInjectable, ToastInjectable, U
     // MARK: - UITextFieldDelegate
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        signinButton.isEnabled = !emailField.label.text!.isEmpty && !passwordField.label.text!.isEmpty
+        let fulfilled = !emailField.label.text!.isEmpty && !passwordField.label.text!.isEmpty
+        signinButton.isEnabled = fulfilled
+        signinButton.backdropColor = fulfilled ? #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1) : UIColor.white
+        signinButton.titleColor = fulfilled ? .white : .black
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

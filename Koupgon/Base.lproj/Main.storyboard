@@ -6,9 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -106,18 +104,6 @@
                                     <action selector="signinButtonTapped:" destination="8QV-za-EyU" eventType="touchUpInside" id="4NK-Ga-Coa"/>
                                 </connections>
                             </view>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="TAO-x8-DwG">
-                                <rect key="frame" x="93.5" y="156.5" width="187.5" height="187.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="TAO-x8-DwG" secondAttribute="height" multiplier="1:1" id="XH4-mL-3LB"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Koupgon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OH1-tW-hRT">
-                                <rect key="frame" x="126.5" y="65.5" width="123" height="36"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLD-jO-aZ7">
                                 <rect key="frame" x="329" y="20" width="30" height="30"/>
                                 <state key="normal" title="skip"/>
@@ -125,24 +111,52 @@
                                     <action selector="dismissButtonTapped:" destination="8QV-za-EyU" eventType="touchUpInside" id="SkA-ka-hpc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For demo purpose only" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65k-l6-jPy">
+                                <rect key="frame" x="112" y="202" width="149.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Koupgon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OH1-tW-hRT">
+                                <rect key="frame" x="147" y="146" width="81" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1.0.0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pJS-qh-cTv">
+                                <rect key="frame" x="172" y="235" width="30" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="eWd-xB-3Mf">
+                                <rect key="frame" x="158" y="70" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="60" id="9fn-vd-3eT"/>
+                                    <constraint firstAttribute="height" constant="60" id="QZs-t8-43u"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eLD-jO-aZ7" firstAttribute="top" secondItem="O0s-MG-PZr" secondAttribute="bottom" id="14u-fv-gtL"/>
+                            <constraint firstItem="pJS-qh-cTv" firstAttribute="top" secondItem="65k-l6-jPy" secondAttribute="bottom" constant="16" id="A1i-ti-RUk"/>
                             <constraint firstItem="9hN-Pm-6JI" firstAttribute="top" secondItem="lqP-JI-TxS" secondAttribute="bottom" constant="20" id="Bx4-aI-7sT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9hN-Pm-6JI" secondAttribute="trailing" id="G8C-Bx-McU"/>
-                            <constraint firstItem="TAO-x8-DwG" firstAttribute="centerY" secondItem="pq2-Tj-HAR" secondAttribute="centerY" multiplier="3:4" id="RXq-cY-ldl"/>
+                            <constraint firstItem="pJS-qh-cTv" firstAttribute="centerX" secondItem="65k-l6-jPy" secondAttribute="centerX" id="HyD-Se-jtc"/>
+                            <constraint firstItem="OH1-tW-hRT" firstAttribute="top" secondItem="eWd-xB-3Mf" secondAttribute="bottom" constant="16" id="UgB-iP-acj"/>
                             <constraint firstItem="9hN-Pm-6JI" firstAttribute="leading" secondItem="pq2-Tj-HAR" secondAttribute="leadingMargin" id="VtF-jq-LER"/>
+                            <constraint firstItem="eWd-xB-3Mf" firstAttribute="top" secondItem="O0s-MG-PZr" secondAttribute="bottom" constant="50" id="Vzs-xz-XcZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="eLD-jO-aZ7" secondAttribute="trailing" id="a8N-fE-9Ro"/>
                             <constraint firstItem="aup-fV-oLe" firstAttribute="top" secondItem="9hN-Pm-6JI" secondAttribute="bottom" constant="20" id="akx-vd-ZhE"/>
                             <constraint firstItem="aup-fV-oLe" firstAttribute="leading" secondItem="pq2-Tj-HAR" secondAttribute="leadingMargin" id="ggV-XS-we3"/>
+                            <constraint firstItem="eWd-xB-3Mf" firstAttribute="centerX" secondItem="pq2-Tj-HAR" secondAttribute="centerX" id="gme-1t-3h2"/>
                             <constraint firstItem="lqP-JI-TxS" firstAttribute="leading" secondItem="pq2-Tj-HAR" secondAttribute="leadingMargin" id="hYg-Pd-pE6"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aup-fV-oLe" secondAttribute="trailing" id="hps-aP-Nda"/>
-                            <constraint firstItem="OH1-tW-hRT" firstAttribute="centerY" secondItem="pq2-Tj-HAR" secondAttribute="centerY" multiplier="1:4" id="im4-aD-5RW"/>
                             <constraint firstItem="dht-tJ-MHZ" firstAttribute="top" secondItem="aup-fV-oLe" secondAttribute="bottom" constant="20" id="m2p-QF-87v"/>
                             <constraint firstItem="OH1-tW-hRT" firstAttribute="centerX" secondItem="pq2-Tj-HAR" secondAttribute="centerX" id="pLI-Jk-99l"/>
-                            <constraint firstItem="TAO-x8-DwG" firstAttribute="centerX" secondItem="pq2-Tj-HAR" secondAttribute="centerX" id="qLz-uD-Pa2"/>
-                            <constraint firstItem="TAO-x8-DwG" firstAttribute="width" secondItem="pq2-Tj-HAR" secondAttribute="width" multiplier="1:2" id="wEE-mG-J9S"/>
+                            <constraint firstItem="65k-l6-jPy" firstAttribute="centerX" secondItem="OH1-tW-hRT" secondAttribute="centerX" id="pfb-vr-nMd"/>
+                            <constraint firstItem="65k-l6-jPy" firstAttribute="top" secondItem="OH1-tW-hRT" secondAttribute="bottom" constant="32" id="yJw-H2-v5W"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lqP-JI-TxS" secondAttribute="trailing" id="yPz-Jy-nYR"/>
                         </constraints>
                     </view>
@@ -202,8 +216,8 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I agree to Koupon's" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYE-W1-JJx">
-                                <rect key="frame" x="93" y="312" width="189" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="93" y="312" width="189" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -240,17 +254,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End User License Agreement" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="595-WY-AK9">
-                                <rect key="frame" x="93" y="336" width="222" height="21"/>
+                                <rect key="frame" x="93" y="340" width="187" height="17"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4In-pW-n6i" customClass="Button" customModule="Koupgon" customModuleProvider="target">
                                 <rect key="frame" x="16" y="389" width="343" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="T8F-vq-AgD"/>
                                 </constraints>
@@ -284,14 +297,13 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AmN-kS-1Oc">
                                 <rect key="frame" x="205" y="481" width="154" height="1"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="zaR-U8-T2h"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRa-Fx-35J" customClass="Button" customModule="Koupgon" customModuleProvider="target">
                                 <rect key="frame" x="16" y="524" width="343" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Zs1-VG-e3K"/>
                                 </constraints>
@@ -320,13 +332,13 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UFH-Cg-ZxS">
                                 <rect key="frame" x="16" y="480.5" width="154" height="1"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="exy-Wy-rhM"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="i00-qE-L16" secondAttribute="leading" id="2UG-he-nWK"/>
                             <constraint firstItem="IDR-zM-wWD" firstAttribute="top" secondItem="JNf-CL-2E9" secondAttribute="bottom" constant="32" id="30t-ZC-vMc"/>
@@ -465,7 +477,6 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PO6-OK-HIt" customClass="Button" customModule="Koupgon" customModuleProvider="target">
                                 <rect key="frame" x="16" y="240" width="343" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="VM9-Fh-yrY"/>
                                 </constraints>
@@ -493,7 +504,7 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yiW-Qg-sJY">
                                 <rect key="frame" x="16" y="332" width="154" height="1"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="5Ad-mz-qqV"/>
                                 </constraints>
@@ -506,14 +517,13 @@
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2j-s0-sQE">
                                 <rect key="frame" x="205" y="332" width="154" height="1"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="EmZ-P7-QXy"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qyw-zL-2rD" customClass="Button" customModule="Koupgon" customModuleProvider="target">
                                 <rect key="frame" x="16" y="375" width="343" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="kdr-IH-j6u"/>
                                 </constraints>
@@ -560,7 +570,7 @@
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -587,7 +597,7 @@
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -595,7 +605,7 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="PO6-OK-HIt" secondAttribute="leading" id="01q-HI-uOK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vS3-ad-ZiM" secondAttribute="trailing" id="4Zd-E5-bSc"/>

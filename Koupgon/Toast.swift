@@ -28,5 +28,6 @@ class Toast: UIView {
         
         titleLabel.font = titleLabel.font.withSize(16)
         titleLabel.layer.opacity = 0.8
+        titleLabel.textAlignment = .center
     }
 }

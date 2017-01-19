@@ -38,7 +38,7 @@ class AuthNavigationController: UINavigationController, SigninViewControllerDele
     }
     
     func willGoSignup() {
-        let targetVC = SignupViewController()
+        let targetVC = StoryboardScene.Main.instantiateSignup()
         targetVC.delegate = self
         pushViewController(targetVC, animated: true)
     }
