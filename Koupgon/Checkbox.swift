@@ -17,8 +17,8 @@ class Checkbox: IBDesignableControl {
     
     @IBInspectable var borderColor: UIColor = .white {
         didSet {
-            backdrop.layer.cornerRadius = 5.0
-            backdrop.layer.borderWidth = 2.0
+            backdrop.layer.cornerRadius = 3.0
+            backdrop.layer.borderWidth = 1.0
             backdrop.layer.borderColor = borderColor.cgColor
             backdrop.layer.masksToBounds = true
         }

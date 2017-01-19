@@ -32,6 +32,8 @@ class BrowseTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // temporarily clear everything
+        
         do {
             try FIRAuth.auth()?.signOut()
         } catch {
@@ -40,6 +42,9 @@ class BrowseTableViewController: UITableViewController {
         
         let facebookLoginManager = FBSDKLoginManager()
         facebookLoginManager.logOut()
+        
+        UserDefaults.standard.removeObject(forKey: UserDefaultKey.defaultStoreId.rawValue)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

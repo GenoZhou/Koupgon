@@ -14,9 +14,12 @@ class MainNavigationController: UINavigationController, WelcomeViewControllerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        
+        // Config default navigation bar
+        navigationBar.barTintColor = .white
 
         // Jump to Browse if logged in
-        ((FIRAuth.auth()?.currentUser) != nil) ? welcome() : welcomeBack()
+        ((FIRAuth.auth()?.currentUser) != nil) ? welcomeBack() : welcome()
     }
     
     // MARK: - Private Methods
@@ -33,14 +36,14 @@ class MainNavigationController: UINavigationController, WelcomeViewControllerDel
             let targetVC = BrowseTableViewController(storeId: storeId)
             setViewControllers([targetVC], animated: true)
         } else {
-            let targetVC = StoreTableViewController()
+            let targetVC = StoryboardScene.Main.instantiateStore()
             setViewControllers([targetVC], animated: true)
         }
     }
     
     // MARK: - WelcomeViewControllerDelegate
     
-    func willDismiss() {
+    func didFinishAuthentication() {
         welcomeBack()
     }
 

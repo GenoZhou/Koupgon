@@ -9,9 +9,13 @@
 /* Begin PBXBuildFile section */
 		091603B31E2F35EC009AE225 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 091603B21E2F35EC009AE225 /* GoogleService-Info.plist */; };
 		091603B71E2F4175009AE225 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091603B61E2F4175009AE225 /* SignupViewController.swift */; };
-		091603B91E2F4196009AE225 /* AuthViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091603B81E2F4196009AE225 /* AuthViewControllerType.swift */; };
+		091603B91E2F4196009AE225 /* AuthInjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091603B81E2F4196009AE225 /* AuthInjectable.swift */; };
 		091603BB1E2F4597009AE225 /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 091603BA1E2F4597009AE225 /* TextField.swift */; };
 		091603BD1E2F45B5009AE225 /* TextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 091603BC1E2F45B5009AE225 /* TextField.xib */; };
+		09AA3BC01E305D360004837A /* ToastInjectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA3BBF1E305D360004837A /* ToastInjectable.swift */; };
+		09AA3BC21E305E080004837A /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA3BC11E305E080004837A /* Toast.swift */; };
+		09AA3BC51E308D640004837A /* StoreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AA3BC41E308D640004837A /* StoreTableViewCell.swift */; };
+		09AA3BC71E309E100004837A /* StoreTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 09AA3BC61E309E100004837A /* StoreTableViewCell.xib */; };
 		11215723B6DE8B846B2A474C /* Pods_Koupgon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12FD6EF4AB28EABAE0CAAB38 /* Pods_Koupgon.framework */; };
 		750864701E2EB95200D891E1 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7508646F1E2EB95200D891E1 /* MainNavigationController.swift */; };
 		750864741E2EB96E00D891E1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 750864731E2EB96E00D891E1 /* DetailViewController.swift */; };
@@ -58,9 +62,13 @@
 /* Begin PBXFileReference section */
 		091603B21E2F35EC009AE225 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		091603B61E2F4175009AE225 /* SignupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
-		091603B81E2F4196009AE225 /* AuthViewControllerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewControllerType.swift; sourceTree = "<group>"; };
+		091603B81E2F4196009AE225 /* AuthInjectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthInjectable.swift; sourceTree = "<group>"; };
 		091603BA1E2F4597009AE225 /* TextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		091603BC1E2F45B5009AE225 /* TextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TextField.xib; sourceTree = "<group>"; };
+		09AA3BBF1E305D360004837A /* ToastInjectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastInjectable.swift; sourceTree = "<group>"; };
+		09AA3BC11E305E080004837A /* Toast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
+		09AA3BC41E308D640004837A /* StoreTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreTableViewCell.swift; sourceTree = "<group>"; };
+		09AA3BC61E309E100004837A /* StoreTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StoreTableViewCell.xib; sourceTree = "<group>"; };
 		12FD6EF4AB28EABAE0CAAB38 /* Pods_Koupgon.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Koupgon.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		50063EF514A5B3C6138F0422 /* Pods-Koupgon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Koupgon.release.xcconfig"; path = "Pods/Target Support Files/Pods-Koupgon/Pods-Koupgon.release.xcconfig"; sourceTree = "<group>"; };
 		55B5A137A6FFAA538B7448F4 /* Pods_KoupgonUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KoupgonUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -127,16 +135,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09AA3BC31E3077180004837A /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				7508648E1E30210500D891E1 /* Global.swift */,
+				091603B81E2F4196009AE225 /* AuthInjectable.swift */,
+				09AA3BBF1E305D360004837A /* ToastInjectable.swift */,
+			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
 		7508647D1E2EBCC700D891E1 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				750864791E2EBC9000D891E1 /* IBDesignable.swift */,
+				09AA3BC11E305E080004837A /* Toast.swift */,
 				091603BA1E2F4597009AE225 /* TextField.swift */,
 				091603BC1E2F45B5009AE225 /* TextField.xib */,
 				7508647B1E2EBCC300D891E1 /* Button.swift */,
 				7508647E1E2EBD2F00D891E1 /* Button.xib */,
 				750864821E2FFE3600D891E1 /* Checkbox.swift */,
 				750864841E2FFE5000D891E1 /* Checkbox.xib */,
+				09AA3BC41E308D640004837A /* StoreTableViewCell.swift */,
+				09AA3BC61E309E100004837A /* StoreTableViewCell.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -176,13 +197,12 @@
 			children = (
 				7508648D1E301FC300D891E1 /* Model */,
 				7508647D1E2EBCC700D891E1 /* UI */,
-				091603B81E2F4196009AE225 /* AuthViewControllerType.swift */,
-				7508648E1E30210500D891E1 /* Global.swift */,
-				7587A1B61E2EAC7800F0C6F2 /* WelcomeViewController.swift */,
+				09AA3BC31E3077180004837A /* Helper */,
 				750864881E30078F00D891E1 /* AuthNavigationController.swift */,
 				091603B61E2F4175009AE225 /* SignupViewController.swift */,
 				750864861E3006DB00D891E1 /* SigninViewController.swift */,
 				7508646F1E2EB95200D891E1 /* MainNavigationController.swift */,
+				7587A1B61E2EAC7800F0C6F2 /* WelcomeViewController.swift */,
 				750864751E2EBA4000D891E1 /* StoreTableViewController.swift */,
 				750864771E2EBA9F00D891E1 /* BrowseTableViewController.swift */,
 				750864731E2EB96E00D891E1 /* DetailViewController.swift */,
@@ -364,6 +384,7 @@
 				750864851E2FFE5000D891E1 /* Checkbox.xib in Resources */,
 				7587A1BA1E2EAC7800F0C6F2 /* Main.storyboard in Resources */,
 				7508647F1E2EBD2F00D891E1 /* Button.xib in Resources */,
+				09AA3BC71E309E100004837A /* StoreTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,10 +550,11 @@
 				750864871E3006DB00D891E1 /* SigninViewController.swift in Sources */,
 				7587A1B71E2EAC7800F0C6F2 /* WelcomeViewController.swift in Sources */,
 				750864741E2EB96E00D891E1 /* DetailViewController.swift in Sources */,
+				09AA3BC21E305E080004837A /* Toast.swift in Sources */,
 				7508648C1E301FBD00D891E1 /* Store.swift in Sources */,
 				091603B71E2F4175009AE225 /* SignupViewController.swift in Sources */,
 				091603BB1E2F4597009AE225 /* TextField.swift in Sources */,
-				091603B91E2F4196009AE225 /* AuthViewControllerType.swift in Sources */,
+				091603B91E2F4196009AE225 /* AuthInjectable.swift in Sources */,
 				750864781E2EBA9F00D891E1 /* BrowseTableViewController.swift in Sources */,
 				750864701E2EB95200D891E1 /* MainNavigationController.swift in Sources */,
 				7587A1B51E2EAC7800F0C6F2 /* AppDelegate.swift in Sources */,
@@ -540,9 +562,11 @@
 				7508647A1E2EBC9000D891E1 /* IBDesignable.swift in Sources */,
 				750864831E2FFE3600D891E1 /* Checkbox.swift in Sources */,
 				750864891E30079000D891E1 /* AuthNavigationController.swift in Sources */,
+				09AA3BC01E305D360004837A /* ToastInjectable.swift in Sources */,
 				7508647C1E2EBCC300D891E1 /* Button.swift in Sources */,
 				7508648F1E30210500D891E1 /* Global.swift in Sources */,
 				750864761E2EBA4000D891E1 /* StoreTableViewController.swift in Sources */,
+				09AA3BC51E308D640004837A /* StoreTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

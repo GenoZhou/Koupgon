@@ -12,12 +12,5 @@ struct Store {
     let id: String
     let name: String
     let distance: String
-    let imageURL: URL
-    
-    init(id: String, name: String, distance: String, imageURL: URL) {
-        self.id = id
-        self.name = name
-        self.distance = distance
-        self.imageURL = imageURL
-    }
+    let imageURL: String
 }

@@ -8,15 +8,47 @@
 
 import UIKit
 
-class AuthNavigationController: UINavigationController {
+protocol AuthNavigationControllerDelegate: class {
+    func willFinishAuthentication(_ completion: () -> ())
+}
 
+class AuthNavigationController: UINavigationController, SigninViewControllerDelegate, SignupViewControllerDelegate {
+
+    // MARK: - Properties
+    
+    weak var authNavDelegate: AuthNavigationControllerDelegate?
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
         navigationBar.tintColor = .white
         navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+    }
+    
+    // MARK: - SigninViewControllerDelegate
+    
+    func didFinishSignin() {
+        self.authNavDelegate?.willFinishAuthentication {
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    func willGoSignup() {
+        let targetVC = SignupViewController()
+        targetVC.delegate = self
+        pushViewController(targetVC, animated: true)
+    }
+    
+    // MARK: - SignupViewControllerDelegate
+    
+    func didFinishSignup() {
+        self.authNavDelegate?.willFinishAuthentication {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
 }

@@ -9,10 +9,10 @@
 import UIKit
 
 protocol WelcomeViewControllerDelegate: class {
-    func willDismiss()
+    func didFinishAuthentication()
 }
 
-class WelcomeViewController: UIViewController, AuthViewControllerType {
+class WelcomeViewController: UIViewController, AuthInjectable, ToastInjectable, AuthNavigationControllerDelegate {
     
     // MARK: - Internal Properties
     
@@ -33,23 +33,35 @@ class WelcomeViewController: UIViewController, AuthViewControllerType {
     @IBAction func emailSignupButtonTapped(_ sender: Any) {
         let signupVC = StoryboardScene.Main.instantiateSignup()
         let authNav = AuthNavigationController(rootViewController: signupVC)
+        signupVC.delegate = authNav
+        authNav.authNavDelegate = self
         present(authNav, animated: true, completion: nil)
     }
     
     @IBAction func facebookSignupButtonTapped(_ sender: Any) {
         facebookSignup {
-            self.delegate?.willDismiss()
+            completed in
+            completed ? self.delegate?.didFinishAuthentication() : self.showToast(withText: "Failed to sign up, try it later.", type: .warning)
         }
     }
     
     @IBAction func signinButtonTapped(_ sender: Any) {
         let signinVC = StoryboardScene.Main.instantiateSignin()
         let authNav = AuthNavigationController(rootViewController: signinVC)
+        signinVC.delegate = authNav
+        authNav.authNavDelegate = self
         present(authNav, animated: true, completion: nil)
     }
     
     @IBAction func dismissButtonTapped(_ sender: Any) {
-        delegate?.willDismiss()
+        delegate?.didFinishAuthentication()
+    }
+    
+    // MARK: - AuthNavigationControllerDelegate
+    
+    func willFinishAuthentication(_ completion: () -> ()) {
+        delegate?.didFinishAuthentication()
+        completion()
     }
 }
 
