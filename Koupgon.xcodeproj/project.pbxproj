@@ -356,7 +356,7 @@
 				TargetAttributes = {
 					7587A1B01E2EAC7800F0C6F2 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 8678QKG55R;
+						DevelopmentTeam = 6GSRA2VTY3;
 						ProvisioningStyle = Automatic;
 					};
 					7587A1C41E2EAC7900F0C6F2 = {
@@ -745,7 +745,7 @@
 			baseConfigurationReference = CD5E19D1523D79C22C82503C /* Pods-Koupgon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8678QKG55R;
+				DEVELOPMENT_TEAM = 6GSRA2VTY3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -753,7 +753,7 @@
 				INFOPLIST_FILE = Koupgon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.genozhou.Koupgon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.genozhou.iioupgon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -764,7 +764,7 @@
 			baseConfigurationReference = 50063EF514A5B3C6138F0422 /* Pods-Koupgon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 8678QKG55R;
+				DEVELOPMENT_TEAM = 6GSRA2VTY3;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -772,7 +772,7 @@
 				INFOPLIST_FILE = Koupgon/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
-				PRODUCT_BUNDLE_IDENTIFIER = com.genozhou.Koupgon;
+				PRODUCT_BUNDLE_IDENTIFIER = com.genozhou.iioupgon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
