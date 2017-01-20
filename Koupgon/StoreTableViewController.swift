@@ -20,6 +20,7 @@ class StoreTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
+        navigationController?.isToolbarHidden = true
     }
     
     override func viewDidLoad() {
@@ -34,9 +35,11 @@ class StoreTableViewController: UITableViewController {
         let store6 = Store(id: "6", name: "Valufoods", distance: "917.35", imageURL: "images/valufoods.jpg")
         stores = [store1, store2, store3, store4, store5, store6]
         
+        // Set extra tableview inset
         tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 16, right: 0)
         
-        let queue = DispatchQueue(label: "imageDownloadingQueue")
+        // Async load images
+        let queue = DispatchQueue(label: "storeImageLoadingQueue")
         queue.async {
             for (index, element) in self.stores.enumerated() {
                 self.storeImages.append(UIImage())
@@ -55,15 +58,18 @@ class StoreTableViewController: UITableViewController {
         }
     }
 
+    // MARK: - Private Methods
+    func didTapCancelItem() {
+        dismiss(animated: true, completion: nil)
+    }
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return stores.count
     }
     
@@ -79,12 +85,18 @@ class StoreTableViewController: UITableViewController {
     // MARK: - UITableViewDelegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedStoreId = stores[indexPath.row].id
-        let key: UserDefaultKey = .defaultStoreId
-        UserDefaults.standard.set(selectedStoreId, forKey: key.rawValue)
+        let selectedStoreName = stores[indexPath.row].name
+        let key: UserDefaultKey = .defaultStoreName
+        UserDefaults.standard.set(selectedStoreName, forKey: key.rawValue)
         
-        let targetVC = BrowseTableViewController(storeId: selectedStoreId)
-        navigationController?.pushViewController(targetVC, animated: true)
+        if let targetVC = navigationController?.viewControllers.first as? BrowseTableViewController {
+            targetVC.storeName = selectedStoreName
+            _ = navigationController?.popViewController(animated: true)
+        } else {
+            let targetVC = StoryboardScene.Main.instantiateBrowse()
+            targetVC.storeName = selectedStoreName
+            navigationController?.pushViewController(targetVC, animated: true)
+        }
     }
     
 }

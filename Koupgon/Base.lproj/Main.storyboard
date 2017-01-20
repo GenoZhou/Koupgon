@@ -423,7 +423,112 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eBN-bV-D9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1102" y="-6"/>
+            <point key="canvasLocation" x="41" y="36"/>
+        </scene>
+        <!--Browse-->
+        <scene sceneID="hl2-nn-vP7">
+            <objects>
+                <tableViewController storyboardIdentifier="Browse" title="Browse" id="ZY0-nd-Jgd" customClass="BrowseTableViewController" customModule="Koupgon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="90" sectionHeaderHeight="28" sectionFooterHeight="28" id="5qA-Ig-RNB">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="BrowseTableViewCell" rowHeight="90" id="fM3-uU-oM5" customClass="BrowseTableViewCell" customModule="Koupgon" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="90"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fM3-uU-oM5" id="iZA-Xa-Csc">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="ZY0-nd-Jgd" id="7DF-Hx-10x"/>
+                            <outlet property="delegate" destination="ZY0-nd-Jgd" id="u18-GD-eHu"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GNt-pf-4kz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="769" y="36"/>
+        </scene>
+        <!--Detail-->
+        <scene sceneID="fRX-Rn-89I">
+            <objects>
+                <tableViewController storyboardIdentifier="Detail" title="Detail" id="ejT-cj-JGV" customClass="DetailTableViewController" customModule="Koupgon" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="600" sectionHeaderHeight="28" sectionFooterHeight="28" id="MeL-SV-XJ9">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="DetailTableViewCell" id="AWJ-Mu-et5" customClass="DetailTableViewCell" customModule="Koupgon" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="600"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="AWJ-Mu-et5" id="RWi-Pi-VFh">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="ejT-cj-JGV" id="lr6-fz-xnF"/>
+                            <outlet property="delegate" destination="ejT-cj-JGV" id="6ra-Qv-HME"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JSb-cS-wxT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1510" y="36"/>
+        </scene>
+        <!--Web-->
+        <scene sceneID="CV5-ak-9ZQ">
+            <objects>
+                <viewController storyboardIdentifier="Web" title="Web" id="eVj-zu-DJa" customClass="WebViewController" customModule="Koupgon" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9qU-lc-18u"/>
+                        <viewControllerLayoutGuide type="bottom" id="RuL-gT-xmn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5aJ-Gf-8cO">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MT9-XM-twn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MT9-XM-twn" firstAttribute="top" secondItem="9qU-lc-18u" secondAttribute="bottom" id="Cg0-v4-flt"/>
+                            <constraint firstItem="MT9-XM-twn" firstAttribute="leading" secondItem="5aJ-Gf-8cO" secondAttribute="leading" id="PcX-Es-8TH"/>
+                            <constraint firstItem="RuL-gT-xmn" firstAttribute="top" secondItem="MT9-XM-twn" secondAttribute="bottom" id="ZyK-1A-XWh"/>
+                            <constraint firstAttribute="trailing" secondItem="MT9-XM-twn" secondAttribute="trailing" id="mr9-7P-bL9"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="webview" destination="MT9-XM-twn" id="0IZ-u4-egF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8T9-ub-sc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2284" y="36"/>
         </scene>
         <!--Sign In-->
         <scene sceneID="M3o-UE-Elm">

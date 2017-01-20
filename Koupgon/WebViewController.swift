@@ -1,19 +1,27 @@
 //
-//  DetailViewController.swift
+//  WebViewController.swift
 //  Koupgon
 //
-//  Created by Mobile on 2017-01-17.
+//  Created by GenoZhou on 2017-01-20.
 //  Copyright © 2017 genozhou. All rights reserved.
 //
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class WebViewController: UIViewController, UIWebViewDelegate {
 
+    @IBOutlet weak var webview: UIWebView!
+    
+    var urlContext: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        dPrint(urlContext)
+        webview.delegate = self
+        guard let url = URL(string: urlContext) else { return }
+        let requestObj = URLRequest(url: url)
+        webview.loadRequest(requestObj)
     }
 
     override func didReceiveMemoryWarning() {

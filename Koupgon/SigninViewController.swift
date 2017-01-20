@@ -13,7 +13,7 @@ protocol SigninViewControllerDelegate: class {
     func willGoSignup()
 }
 
-class SigninViewController: UIViewController, AuthInjectable, ToastInjectable, UITextFieldDelegate {
+class SigninViewController: UIViewController, AuthInjectable, ToastInjectable, AlertInjectable, UITextFieldDelegate {
 
     // MARK: - IBOutlets
     @IBOutlet var inputCollection: [TextField]!
@@ -66,14 +66,7 @@ class SigninViewController: UIViewController, AuthInjectable, ToastInjectable, U
         guard !emailField.label.text!.isEmpty else { showToast(withText: "Email Required", type: .warning); return }
         resetPassword(with: emailField.label.text!) {
             completed in
-            if completed {
-                let alert = UIAlertController(title: "Success", message: "An email will be sent shortly with the intruction to reset your password.", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
-                alert.addAction(okAction)
-                self.present(alert, animated: true, completion: nil)
-            } else {
-                self.showToast(withText: "Failed to reset, try it later.", type: .warning)
-            }
+            completed ? self.showAlert(withTitle: "Success", message: "An email will be sent shortly with the intruction to reset your password.") : self.showToast(withText: "Failed to reset, try it later.", type: .warning)
         }
     }
     

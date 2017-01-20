@@ -8,115 +8,94 @@
 
 import UIKit
 import Firebase
-import FBSDKLoginKit
 
-class BrowseTableViewController: UITableViewController {
+class BrowseTableViewController: UITableViewController, AlertInjectable, UINavigationBarDelegate {
     
-    var storeId: String
+    // MARK: - Properties
     
-    // MARK: - Initialization
-    
-    init(storeId: String) {
-        self.storeId = storeId
-        super.init(style: .grouped)
-    }
-    
-    required init?(coder aDecoder: NSCoder) { fatalError("init(coder:) has not been implemented") }
+    var storeName: String?
+    var coupons: [Coupon] = []
+    var couponImages: [UIImage] = []
 
     // MARK: - Lifecycle
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
+        navigationController?.isToolbarHidden = false
+        let storeItem = UIBarButtonItem(title: "Selected Store: \(storeName)", style: .plain, target: self, action: #selector(didTapSelectStoreBarButtonItem))
+        setToolbarItems([storeItem], animated: false)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // temporarily clear everything
+        // Setup mock data
+        let coupon = Coupon(title: "$0.50 Off", description: "Dr.Oetker Premium Desserts", expiry: 13, imageURL: "images/couponImage.jpeg", detail: "Printed coupgons are not accepted. Cannot be combined with any other coupon offer. No cash surrender value, no cash back. One coupgon must be presented for each product purchased. Not all items are available in all stores. Can only be redeemed using the coupgon mobile app.", websiteURL: "https://www.google.ca")
+        coupons = Array(repeating: coupon, count: 20)
         
-        do {
-            try FIRAuth.auth()?.signOut()
-        } catch {
-            print("Signout failed")
+        // Set extra tableview inset
+        tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 16, right: 0)
+        
+        // Async load images
+        let queue = DispatchQueue(label: "couponImageLoadingQueue")
+        queue.async {
+            for (index, element) in self.coupons.enumerated() {
+                self.couponImages.append(UIImage())
+                let ref = FIRStorage.storage().reference(withPath: element.imageURL)
+                ref.data(withMaxSize: 1*1024*1024) {
+                    data, error in
+                    if error == nil {
+                        self.couponImages[index] = UIImage(data: data!)!
+                        DispatchQueue.main.async {
+                            let indexPath = IndexPath(row: index, section: 0)
+                            self.tableView.reloadRows(at: [indexPath], with: .fade)
+                        }
+                    } else { dPrint(error.debugDescription) }
+                }
+            }
         }
-        
-        let facebookLoginManager = FBSDKLoginManager()
-        facebookLoginManager.logOut()
-        
-        UserDefaults.standard.removeObject(forKey: UserDefaultKey.defaultStoreId.rawValue)
-        
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    // MARK: - Private Methods
+    
+    @objc private func didTapCissorButton(_ sender: UIButton) {
+        dPrint(sender.tag)
+        showAlert(withTitle: "Ummmm", message: "This feature not yet implemented.")
+    }
+    
+    func didTapSelectStoreBarButtonItem() {
+        let targetVC = StoryboardScene.Main.instantiateStore()
+        navigationController?.pushViewController(targetVC, animated: true)
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return coupons.count
     }
 
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "BrowseTableViewCell", for: indexPath) as! BrowseTableViewCell
+        let selectedCoupon = coupons[indexPath.row]
+        cell.titleLabel.text = selectedCoupon.title
+        cell.descriptionLabel.text = selectedCoupon.description
+        cell.expiryLabel.text = "Clippable for \(selectedCoupon.expiry) days"
+        cell.photo.image = couponImages[indexPath.row]
+        cell.cissorButton.tag = indexPath.row
+        cell.cissorButton.addTarget(self, action: #selector(didTapCissorButton(_:)), for: .touchUpInside)
         return cell
     }
-    */
 
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    // MARK: - UITableViewDelegate
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let targetVC = StoryboardScene.Main.instantiateDetail()
+        targetVC.coupon = coupons[indexPath.row]
+        targetVC.couponImage = couponImages[indexPath.row]
+        navigationController?.pushViewController(targetVC, animated: true)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

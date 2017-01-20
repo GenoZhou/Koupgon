@@ -9,5 +9,18 @@
 import Foundation
 
 enum UserDefaultKey: String {
-    case defaultStoreId
+    case defaultStoreName
+}
+
+func dPrint(_ item: @autoclosure () -> Any) {
+    #if DEBUG
+    print(item())
+    #endif
+}
+
+func measure(f: () -> ()) {
+    let start = CFAbsoluteTimeGetCurrent()
+    f()
+    let end = CFAbsoluteTimeGetCurrent()
+    print("Time cost: \(end - start)")
 }
