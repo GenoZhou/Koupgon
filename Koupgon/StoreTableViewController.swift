@@ -59,7 +59,7 @@ class StoreTableViewController: UITableViewController {
     }
 
     // MARK: - Private Methods
-    func didTapCancelItem() {
+    @objc private func didTapCancelItem() {
         dismiss(animated: true, completion: nil)
     }
     

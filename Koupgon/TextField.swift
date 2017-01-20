@@ -42,12 +42,15 @@ class TextField: IBDesignableView {
             case .normal:
                 label.keyboardType = .default
                 label.isSecureTextEntry = false
+                label.returnKeyType = .done
             case .email:
                 label.keyboardType = .emailAddress
                 label.isSecureTextEntry = false
+                label.returnKeyType = .done
             case .password:
                 label.keyboardType = .default
                 label.isSecureTextEntry = true
+                label.returnKeyType = .done
             }
         }
     }

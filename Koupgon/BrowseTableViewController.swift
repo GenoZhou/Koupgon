@@ -72,7 +72,7 @@ class BrowseTableViewController: UITableViewController, AlertInjectable, UINavig
         showAlert(withTitle: "Ummmm", message: "This feature not yet implemented.")
     }
     
-    func didTapSelectStoreBarButtonItem() {
+    @objc private func didTapSelectStoreBarButtonItem() {
         let targetVC = StoryboardScene.Main.instantiateStore()
         navigationController?.pushViewController(targetVC, animated: true)
     }

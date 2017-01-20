@@ -48,6 +48,13 @@ class SignupViewController: UIViewController, AuthInjectable, ToastInjectable, U
         dismiss(animated: true, completion: nil)
     }
     
+    private func layoutSignupButtonIfNeed() {
+        let fulfilled = !emailField.label.text!.isEmpty && !passwordField.label.text!.isEmpty && !confirmPasswordField.label.text!.isEmpty && checkbox.isSelected
+        signupButton.isEnabled = fulfilled
+        signupButton.backdropColor = fulfilled ? #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1) : UIColor.white
+        signupButton.titleColor = fulfilled ? .white : .black
+    }
+    
     // MARK: - IBActions
 
     @IBAction func signupButtonTapped(_ sender: Any) {
@@ -65,13 +72,14 @@ class SignupViewController: UIViewController, AuthInjectable, ToastInjectable, U
         }
     }
     
+    @IBAction func checkboxTapped(_ sender: Any) {
+        layoutSignupButtonIfNeed()
+    }
+    
     // MARK: - UITextFieldDelegate
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        let fulfilled = !emailField.label.text!.isEmpty && !passwordField.label.text!.isEmpty && !confirmPasswordField.label.text!.isEmpty && checkbox.isSelected
-        signupButton.isEnabled = fulfilled
-        signupButton.backdropColor = fulfilled ? #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1) : UIColor.white
-        signupButton.titleColor = fulfilled ? .white : .black
+        layoutSignupButtonIfNeed()
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

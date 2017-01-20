@@ -104,13 +104,6 @@
                                     <action selector="signinButtonTapped:" destination="8QV-za-EyU" eventType="touchUpInside" id="4NK-Ga-Coa"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLD-jO-aZ7">
-                                <rect key="frame" x="329" y="20" width="30" height="30"/>
-                                <state key="normal" title="skip"/>
-                                <connections>
-                                    <action selector="dismissButtonTapped:" destination="8QV-za-EyU" eventType="touchUpInside" id="SkA-ka-hpc"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="For demo purpose only" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="65k-l6-jPy">
                                 <rect key="frame" x="112" y="202" width="149.5" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -139,7 +132,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="eLD-jO-aZ7" firstAttribute="top" secondItem="O0s-MG-PZr" secondAttribute="bottom" id="14u-fv-gtL"/>
                             <constraint firstItem="pJS-qh-cTv" firstAttribute="top" secondItem="65k-l6-jPy" secondAttribute="bottom" constant="16" id="A1i-ti-RUk"/>
                             <constraint firstItem="9hN-Pm-6JI" firstAttribute="top" secondItem="lqP-JI-TxS" secondAttribute="bottom" constant="20" id="Bx4-aI-7sT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="9hN-Pm-6JI" secondAttribute="trailing" id="G8C-Bx-McU"/>
@@ -147,7 +139,6 @@
                             <constraint firstItem="OH1-tW-hRT" firstAttribute="top" secondItem="eWd-xB-3Mf" secondAttribute="bottom" constant="16" id="UgB-iP-acj"/>
                             <constraint firstItem="9hN-Pm-6JI" firstAttribute="leading" secondItem="pq2-Tj-HAR" secondAttribute="leadingMargin" id="VtF-jq-LER"/>
                             <constraint firstItem="eWd-xB-3Mf" firstAttribute="top" secondItem="O0s-MG-PZr" secondAttribute="bottom" constant="50" id="Vzs-xz-XcZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="eLD-jO-aZ7" secondAttribute="trailing" id="a8N-fE-9Ro"/>
                             <constraint firstItem="aup-fV-oLe" firstAttribute="top" secondItem="9hN-Pm-6JI" secondAttribute="bottom" constant="20" id="akx-vd-ZhE"/>
                             <constraint firstItem="aup-fV-oLe" firstAttribute="leading" secondItem="pq2-Tj-HAR" secondAttribute="leadingMargin" id="ggV-XS-we3"/>
                             <constraint firstItem="eWd-xB-3Mf" firstAttribute="centerX" secondItem="pq2-Tj-HAR" secondAttribute="centerX" id="gme-1t-3h2"/>
@@ -233,6 +224,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="image" keyPath="selectedImage" value="checkbox"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="checkboxTapped:" destination="Vvf-Qa-rPm" eventType="touchUpInside" id="We4-4k-UsA"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JNf-CL-2E9" customClass="TextField" customModule="Koupgon" customModuleProvider="target">
                                 <rect key="frame" x="16" y="240" width="343" height="40"/>

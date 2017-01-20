@@ -10,13 +10,16 @@ import UIKit
 import Firebase
 
 class MainNavigationController: UINavigationController, WelcomeViewControllerDelegate {
-
+    
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-
+        
         // Config default navigation bar
         navigationBar.barTintColor = .white
+        
         // Jump to Browse if logged in
         ((FIRAuth.auth()?.currentUser) != nil) ? welcomeBack() : welcome()
     }

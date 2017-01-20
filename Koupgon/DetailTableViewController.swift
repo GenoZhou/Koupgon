@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FBSDKLoginKit
 
-class DetailTableViewController: UITableViewController, AlertInjectable {
+class DetailTableViewController: UITableViewController, AlertInjectable, ToastInjectable {
     
     // MARK: - Properties
     
@@ -26,6 +26,10 @@ class DetailTableViewController: UITableViewController, AlertInjectable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Config NavigationItem
+        let logoutButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logout))
+        navigationItem.setRightBarButton(logoutButton, animated: false)
 
         // Set extra tableview inset
         tableView.contentInset = UIEdgeInsets(top: 8, left: 0, bottom: 16, right: 0)
@@ -33,14 +37,32 @@ class DetailTableViewController: UITableViewController, AlertInjectable {
     
     // MARK: - Private Methods
     
-    func didTapCissorButton(_ sender: UIButton) {
+    @objc private func didTapCissorButton(_ sender: UIButton) {
         showAlert(withTitle: "Ummmm", message: "This feature is not yet implemented")
     }
     
-    func didTapWebsiteButton() {
+    @objc private func didTapWebsiteButton() {
         let targetVC = StoryboardScene.Main.instantiateWeb()
         targetVC.urlContext = coupon?.websiteURL
         navigationController?.pushViewController(targetVC, animated: true)
+    }
+    
+    @objc private func logout() {
+        do {
+            // Logout Firebase & facebook
+            try FIRAuth.auth()?.signOut()
+            let facebookLoginManager = FBSDKLoginManager()
+            facebookLoginManager.logOut()
+            UserDefaults.standard.removeObject(forKey: UserDefaultKey.defaultStoreName.rawValue)
+            
+            // jump back to welcome
+            let rootVC = StoryboardScene.Main.instantiateWelcome()
+            navigationController?.setViewControllers([rootVC], animated: false)
+            _ = navigationController?.popToRootViewController(animated: true)
+        } catch {
+            dPrint("Signout failed")
+            showToast(withText: "Failed to logout, try it later...", type: .warning)
+        }
     }
 
     // MARK: - Table view data source
@@ -64,20 +86,5 @@ class DetailTableViewController: UITableViewController, AlertInjectable {
         cell.cissorButton.addTarget(self, action: #selector(didTapCissorButton(_:)), for: .touchUpInside)
         cell.websiteButton.addTarget(self, action: #selector(didTapWebsiteButton), for: .touchUpInside)
         return cell
-    }
-
-    // MARK: - UITableViewDelegate
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        do {
-            try FIRAuth.auth()?.signOut()
-        } catch {
-            dPrint("Signout failed")
-        }
-        
-        let facebookLoginManager = FBSDKLoginManager()
-        facebookLoginManager.logOut()
-        
-        UserDefaults.standard.removeObject(forKey: UserDefaultKey.defaultStoreName.rawValue)
     }
 }

@@ -53,10 +53,6 @@ class WelcomeViewController: UIViewController, AuthInjectable, ToastInjectable, 
         present(authNav, animated: true, completion: nil)
     }
     
-    @IBAction func dismissButtonTapped(_ sender: Any) {
-        delegate?.didFinishAuthentication()
-    }
-    
     // MARK: - AuthNavigationControllerDelegate
     
     func willFinishAuthentication(_ completion: () -> ()) {
