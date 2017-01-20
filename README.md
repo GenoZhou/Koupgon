@@ -2,6 +2,7 @@
 As coding portfolio - A try on mimicing Coupgon App using my own implementation.
 
 Animated Screenshot(take couple secs to load):
+
 ![gif here](https://github.com/GenoZhou/Koupgon/blob/master/Koupgon.gif)
 
 GoogleService-Info.plist and Pods are required for build but not included in this public repository.
