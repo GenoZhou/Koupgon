@@ -22,8 +22,17 @@ class BrowseTableViewController: UITableViewController, AlertInjectable, UINavig
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
         navigationController?.isToolbarHidden = false
-        let storeItem = UIBarButtonItem(title: "Selected Store: \(storeName)", style: .plain, target: self, action: #selector(didTapSelectStoreBarButtonItem))
+        
+        // Reload sotreName
+        let key: UserDefaultKey = .defaultStoreName
+        storeName = UserDefaults.standard.string(forKey: key.rawValue)
+        
+        // Config toolbar
+        let storeItem = UIBarButtonItem(title: storeName, style: .plain, target: self, action: #selector(didTapSelectStoreBarButtonItem))
         setToolbarItems([storeItem], animated: false)
+        
+        // Config navigationItem
+        navigationItem.hidesBackButton = true
     }
     
     override func viewDidLoad() {

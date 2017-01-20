@@ -87,14 +87,12 @@ class StoreTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedStoreName = stores[indexPath.row].name
         let key: UserDefaultKey = .defaultStoreName
-        UserDefaults.standard.set(selectedStoreName, forKey: key.rawValue)
-        
-        if let targetVC = navigationController?.viewControllers.first as? BrowseTableViewController {
-            targetVC.storeName = selectedStoreName
+        if let _ = UserDefaults.standard.string(forKey: key.rawValue) {
+            UserDefaults.standard.set(selectedStoreName, forKey: key.rawValue)
             _ = navigationController?.popViewController(animated: true)
         } else {
+            UserDefaults.standard.set(selectedStoreName, forKey: key.rawValue)
             let targetVC = StoryboardScene.Main.instantiateBrowse()
-            targetVC.storeName = selectedStoreName
             navigationController?.pushViewController(targetVC, animated: true)
         }
     }

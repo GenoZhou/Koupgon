@@ -31,9 +31,8 @@ class MainNavigationController: UINavigationController, WelcomeViewControllerDel
     
     private func welcomeBack() {
         let key: UserDefaultKey = .defaultStoreName
-        if let storeName = UserDefaults.standard.string(forKey: key.rawValue) {
+        if UserDefaults.standard.string(forKey: key.rawValue) != nil {
             let targetVC = StoryboardScene.Main.instantiateBrowse()
-            targetVC.storeName = storeName
             setViewControllers([targetVC], animated: true)
         } else {
             let targetVC = StoryboardScene.Main.instantiateStore()
