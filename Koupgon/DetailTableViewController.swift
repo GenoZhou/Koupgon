@@ -28,6 +28,8 @@ class DetailTableViewController: UITableViewController, AlertInjectable, ToastIn
         super.viewDidLoad()
         
         // Config NavigationItem
+        let backButton = UIBarButtonItem(image: #imageLiteral(resourceName: "arrowLeft"), style: .plain, target: self, action: #selector(didTapBackButton))
+        navigationItem.setLeftBarButton(backButton, animated: false)
         let logoutButton = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(logout))
         navigationItem.setRightBarButton(logoutButton, animated: false)
 
@@ -57,12 +59,17 @@ class DetailTableViewController: UITableViewController, AlertInjectable, ToastIn
             
             // jump back to welcome
             let rootVC = StoryboardScene.Main.instantiateWelcome()
+            rootVC.delegate = navigationController as! WelcomeViewControllerDelegate?
             navigationController?.setViewControllers([rootVC], animated: false)
             _ = navigationController?.popToRootViewController(animated: true)
         } catch {
             dPrint("Signout failed")
             showToast(withText: "Failed to logout, try it later...", type: .warning)
         }
+    }
+    
+    @objc private func didTapBackButton() {
+        _ = navigationController?.popViewController(animated: true)
     }
 
     // MARK: - Table view data source

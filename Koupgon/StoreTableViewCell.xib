@@ -16,6 +16,7 @@
                 <outlet property="backdrop" destination="nbh-Dg-0UZ" id="kum-hO-tJD"/>
                 <outlet property="distance" destination="wes-Mx-XYp" id="arR-Dj-3BB"/>
                 <outlet property="photo" destination="Wmj-DW-wgz" id="TyZ-9i-wa4"/>
+                <outlet property="shadow" destination="mJG-Oz-AQr" id="Zyu-qf-N6y"/>
                 <outlet property="title" destination="4Ge-mD-wPM" id="0q5-3f-GZ4"/>
             </connections>
         </placeholder>
@@ -24,7 +25,11 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbh-Dg-0UZ">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJG-Oz-AQr">
+                    <rect key="frame" x="16" y="8" width="343" height="184"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nbh-Dg-0UZ">
                     <rect key="frame" x="16" y="8" width="343" height="184"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wmj-DW-wgz">
@@ -73,7 +78,11 @@
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="nbh-Dg-0UZ" secondAttribute="trailing" constant="16" id="03w-aE-OxQ"/>
                 <constraint firstAttribute="bottom" secondItem="nbh-Dg-0UZ" secondAttribute="bottom" constant="8" id="G9H-65-g02"/>
+                <constraint firstItem="mJG-Oz-AQr" firstAttribute="leading" secondItem="nbh-Dg-0UZ" secondAttribute="leading" id="JT6-Pe-M1h"/>
+                <constraint firstItem="mJG-Oz-AQr" firstAttribute="trailing" secondItem="nbh-Dg-0UZ" secondAttribute="trailing" id="KSZ-sp-UCf"/>
+                <constraint firstItem="mJG-Oz-AQr" firstAttribute="bottom" secondItem="nbh-Dg-0UZ" secondAttribute="bottom" id="Oij-0s-V1a"/>
                 <constraint firstItem="nbh-Dg-0UZ" firstAttribute="leading" secondItem="M9m-XE-ga1" secondAttribute="leading" constant="16" id="SDa-DB-GKE"/>
+                <constraint firstItem="mJG-Oz-AQr" firstAttribute="top" secondItem="nbh-Dg-0UZ" secondAttribute="top" id="XFL-QU-NSW"/>
                 <constraint firstItem="nbh-Dg-0UZ" firstAttribute="top" secondItem="M9m-XE-ga1" secondAttribute="top" constant="8" id="kbC-CE-IV3"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>

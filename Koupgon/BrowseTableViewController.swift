@@ -76,6 +76,10 @@ class BrowseTableViewController: UITableViewController, AlertInjectable, UINavig
         let targetVC = StoryboardScene.Main.instantiateStore()
         navigationController?.pushViewController(targetVC, animated: true)
     }
+    
+    @objc private func didTapBackButton() {
+        _ = navigationController?.popViewController(animated: true)
+    }
 
     // MARK: - Table view data source
 

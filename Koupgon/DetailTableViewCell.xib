@@ -18,6 +18,7 @@
                 <outlet property="detailLabel" destination="tfV-5y-TPL" id="8fh-Jy-v1t"/>
                 <outlet property="expiryLabel" destination="vQw-4L-ZgM" id="mvp-X3-TVW"/>
                 <outlet property="photo" destination="wIy-xt-4Og" id="N9A-yu-vn2"/>
+                <outlet property="shadow" destination="Izn-l5-3Ld" id="x0X-PD-2nB"/>
                 <outlet property="titleLabel" destination="6IA-3x-hGa" id="xOp-Yp-5hs"/>
                 <outlet property="websiteButton" destination="CQ1-n2-6YZ" id="yCo-oS-mTu"/>
             </connections>
@@ -27,6 +28,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Izn-l5-3Ld">
+                    <rect key="frame" x="16" y="8" width="343" height="651"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QUS-U8-O0K">
                     <rect key="frame" x="16" y="8" width="343" height="651"/>
                     <subviews>
@@ -143,7 +148,11 @@
                 <constraint firstItem="QUS-U8-O0K" firstAttribute="leading" secondItem="UZx-O9-ptu" secondAttribute="leading" constant="16" id="0zr-qf-txc"/>
                 <constraint firstAttribute="bottom" secondItem="QUS-U8-O0K" secondAttribute="bottom" constant="8" id="GcH-pn-LiX"/>
                 <constraint firstAttribute="trailing" secondItem="QUS-U8-O0K" secondAttribute="trailing" constant="16" id="Jmu-vE-ByJ"/>
+                <constraint firstItem="Izn-l5-3Ld" firstAttribute="bottom" secondItem="QUS-U8-O0K" secondAttribute="bottom" id="Smy-xE-74f"/>
+                <constraint firstItem="Izn-l5-3Ld" firstAttribute="top" secondItem="QUS-U8-O0K" secondAttribute="top" id="crb-OD-2f8"/>
+                <constraint firstItem="Izn-l5-3Ld" firstAttribute="trailing" secondItem="QUS-U8-O0K" secondAttribute="trailing" id="ek1-ei-Yt0"/>
                 <constraint firstItem="QUS-U8-O0K" firstAttribute="top" secondItem="UZx-O9-ptu" secondAttribute="top" constant="8" id="fUf-Te-AVo"/>
+                <constraint firstItem="Izn-l5-3Ld" firstAttribute="leading" secondItem="QUS-U8-O0K" secondAttribute="leading" id="rBD-i2-zov"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>

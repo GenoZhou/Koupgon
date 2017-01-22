@@ -18,6 +18,7 @@
                 <outlet property="descriptionLabel" destination="Ham-mf-GeF" id="qXU-N3-5dW"/>
                 <outlet property="expiryLabel" destination="6BL-fL-Gzq" id="mKl-Pu-3wv"/>
                 <outlet property="photo" destination="gZ1-hl-a5l" id="uEs-Sa-eVx"/>
+                <outlet property="shadow" destination="Ygp-aA-Qrf" id="8D4-RL-dom"/>
                 <outlet property="titleLabel" destination="sZo-9Y-Abp" id="wvF-aB-fVo"/>
             </connections>
         </placeholder>
@@ -26,6 +27,10 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ygp-aA-Qrf">
+                    <rect key="frame" x="16" y="8" width="343" height="84"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CNp-SM-Z12">
                     <rect key="frame" x="16" y="8" width="343" height="84"/>
                     <subviews>
@@ -77,9 +82,13 @@
             </subviews>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="CNp-SM-Z12" secondAttribute="bottom" constant="8" id="0S3-Mv-ziX"/>
+                <constraint firstItem="Ygp-aA-Qrf" firstAttribute="trailing" secondItem="CNp-SM-Z12" secondAttribute="trailing" id="32I-Fy-v5k"/>
+                <constraint firstItem="Ygp-aA-Qrf" firstAttribute="leading" secondItem="CNp-SM-Z12" secondAttribute="leading" id="F1C-YL-MWp"/>
                 <constraint firstAttribute="trailing" secondItem="CNp-SM-Z12" secondAttribute="trailing" constant="16" id="Gk5-Xl-Kwj"/>
                 <constraint firstItem="CNp-SM-Z12" firstAttribute="top" secondItem="TMk-ON-Tl8" secondAttribute="top" constant="8" id="Mi2-tD-EEd"/>
                 <constraint firstItem="CNp-SM-Z12" firstAttribute="leading" secondItem="TMk-ON-Tl8" secondAttribute="leading" constant="16" id="SdE-U9-AOQ"/>
+                <constraint firstItem="Ygp-aA-Qrf" firstAttribute="top" secondItem="CNp-SM-Z12" secondAttribute="top" id="ZiI-pR-QCe"/>
+                <constraint firstItem="Ygp-aA-Qrf" firstAttribute="bottom" secondItem="CNp-SM-Z12" secondAttribute="bottom" id="wnY-4d-ISs"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <nil key="simulatedTopBarMetrics"/>

@@ -21,10 +21,15 @@ class StoreTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
         navigationController?.isToolbarHidden = true
+        hideLeftNavigationItemIfNeeded()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Config NavigationItem
+        let backButton = UIBarButtonItem(image: #imageLiteral(resourceName: "arrowLeft"), style: .plain, target: self, action: #selector(didTapBackButton))
+        navigationItem.setLeftBarButton(backButton, animated: false)
 
         // Setup mock data
         let store1 = Store(id: "1", name: "Longo's", distance: "3.82", imageURL: "images/longos.jpg")
@@ -57,10 +62,18 @@ class StoreTableViewController: UITableViewController {
             }
         }
     }
-
+    
     // MARK: - Private Methods
-    @objc private func didTapCancelItem() {
-        dismiss(animated: true, completion: nil)
+    
+    private func hideLeftNavigationItemIfNeeded() {
+        if let index = navigationController?.viewControllers.index(of: self) {
+            navigationItem.leftBarButtonItem?.tintColor = (index != 0) ? #colorLiteral(red: 0.476841867, green: 0.5048075914, blue: 1, alpha: 1) : UIColor.clear
+            navigationItem.leftBarButtonItem?.isEnabled = (index != 0)
+        }
+    }
+    
+    @objc private func didTapBackButton() {
+        _ = navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Table view data source
