@@ -9,10 +9,13 @@
 import UIKit
 import Firebase
 
-class BrowseTableViewController: UITableViewController, AlertInjectable, UINavigationBarDelegate {
+class BrowseTableViewController: UIViewController, AlertInjectable, UITableViewDelegate, UITableViewDataSource, UIToolbarDelegate {
+    
+    // MARK: - IBOutlets
+    @IBOutlet weak var toolbar: UIToolbar!
+    @IBOutlet weak var tableView: UITableView!
     
     // MARK: - Properties
-    
     var storeName: String?
     var coupons: [Coupon] = []
     var couponImages: [UIImage] = []
@@ -20,16 +23,17 @@ class BrowseTableViewController: UITableViewController, AlertInjectable, UINavig
     // MARK: - Lifecycle
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         navigationController?.isNavigationBarHidden = false
-        navigationController?.isToolbarHidden = false
         
         // Reload sotreName
         let key: UserDefaultKey = .defaultStoreName
         storeName = UserDefaults.standard.string(forKey: key.rawValue)
         
         // Config toolbar
-        let storeItem = UIBarButtonItem(title: storeName, style: .plain, target: self, action: #selector(didTapSelectStoreBarButtonItem))
-        setToolbarItems([storeItem], animated: false)
+        let toolbarButtonItem1 = UIBarButtonItem(title: storeName, style: .plain, target: self, action: #selector(didTapSelectStoreBarButtonItem))
+        let toolbarButtonItem2 = UIBarButtonItem(image: #imageLiteral(resourceName: "arrowRight"), style: .plain, target: self, action: #selector(didTapSelectStoreBarButtonItem))
+        toolbar.setItems([toolbarButtonItem1, toolbarButtonItem2], animated: false)
         
         // Config navigationItem
         navigationItem.hidesBackButton = true
@@ -37,6 +41,11 @@ class BrowseTableViewController: UITableViewController, AlertInjectable, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Config NavigationItem
+        navigationItem.setHidesBackButton(true, animated: false)
+        let hamburgerButton = UIBarButtonItem(image: #imageLiteral(resourceName: "hamburger"), style: .plain, target: self, action: #selector(didTapHamburgerButton))
+        navigationItem.setRightBarButton(hamburgerButton, animated: false)
         
         // Setup mock data
         let coupon = Coupon(title: "$0.50 Off", description: "Dr.Oetker Premium Desserts", expiry: 13, imageURL: "images/couponImage.jpeg", detail: "Printed coupgons are not accepted. Cannot be combined with any other coupon offer. No cash surrender value, no cash back. One coupgon must be presented for each product purchased. Not all items are available in all stores. Can only be redeemed using the coupgon mobile app.", websiteURL: "https://www.google.ca")
@@ -64,7 +73,7 @@ class BrowseTableViewController: UITableViewController, AlertInjectable, UINavig
             }
         }
     }
-    
+
     // MARK: - Private Methods
     
     @objc private func didTapCissorButton(_ sender: UIButton) {
@@ -80,18 +89,22 @@ class BrowseTableViewController: UITableViewController, AlertInjectable, UINavig
     @objc private func didTapBackButton() {
         _ = navigationController?.popViewController(animated: true)
     }
-
+    
+    @objc private func didTapHamburgerButton() {
+        showAlert(withTitle: "Ummm", message: "This feature not implemented yet")
+    }
+    
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return coupons.count
     }
 
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "BrowseTableViewCell", for: indexPath) as! BrowseTableViewCell
         let selectedCoupon = coupons[indexPath.row]
         cell.titleLabel.text = selectedCoupon.title
@@ -105,10 +118,16 @@ class BrowseTableViewController: UITableViewController, AlertInjectable, UINavig
 
     // MARK: - UITableViewDelegate
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let targetVC = StoryboardScene.Main.instantiateDetail()
         targetVC.coupon = coupons[indexPath.row]
         targetVC.couponImage = couponImages[indexPath.row]
         navigationController?.pushViewController(targetVC, animated: true)
+    }
+    
+    // MARK: - UIToolbarDelegate
+    
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
+        return .topAttached
     }
 }

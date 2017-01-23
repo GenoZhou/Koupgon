@@ -149,14 +149,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09AA3BC31E3077180004837A /* Injectable */ = {
+		09AA3BC31E3077180004837A /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				091603B81E2F4196009AE225 /* AuthInjectable.swift */,
 				09AA3BBF1E305D360004837A /* ToastInjectable.swift */,
 				095DDFD61E31E41C00676E07 /* AlertInjectable.swift */,
 			);
-			name = Injectable;
+			name = Extension;
 			sourceTree = "<group>";
 		};
 		7508647D1E2EBCC700D891E1 /* UI */ = {
@@ -216,7 +216,7 @@
 			children = (
 				7508648D1E301FC300D891E1 /* Model */,
 				7508647D1E2EBCC700D891E1 /* UI */,
-				09AA3BC31E3077180004837A /* Injectable */,
+				09AA3BC31E3077180004837A /* Extension */,
 				7508648E1E30210500D891E1 /* Global.swift */,
 				750864881E30078F00D891E1 /* AuthNavigationController.swift */,
 				091603B61E2F4175009AE225 /* SignupViewController.swift */,

@@ -20,7 +20,6 @@ class StoreTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
-        navigationController?.isToolbarHidden = true
         hideLeftNavigationItemIfNeeded()
     }
     

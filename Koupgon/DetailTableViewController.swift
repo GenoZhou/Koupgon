@@ -21,7 +21,6 @@ class DetailTableViewController: UITableViewController, AlertInjectable, ToastIn
     
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = false
-        navigationController?.isToolbarHidden = true
     }
     
     override func viewDidLoad() {
