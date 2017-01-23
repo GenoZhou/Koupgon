@@ -23,9 +23,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lqP-JI-TxS" customClass="Button" customModule="Koupgon" customModuleProvider="target">
-                                <rect key="frame" x="16" y="457" width="343" height="50"/>
+                                <rect key="frame" x="16" y="442" width="343" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="UeP-fd-tjP"/>
+                                    <constraint firstAttribute="height" constant="55" id="UeP-fd-tjP"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="titleLabel" value="Sign up with email"/>
@@ -50,9 +50,9 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9hN-Pm-6JI" customClass="Button" customModule="Koupgon" customModuleProvider="target">
-                                <rect key="frame" x="16" y="527" width="343" height="50"/>
+                                <rect key="frame" x="16" y="517" width="343" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="6Hi-xH-9Ll"/>
+                                    <constraint firstAttribute="height" constant="55" id="6Hi-xH-9Ll"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="titleLabel" value="Sign up with Facebook"/>
@@ -78,9 +78,9 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aup-fV-oLe" customClass="Button" customModule="Koupgon" customModuleProvider="target">
-                                <rect key="frame" x="16" y="597" width="343" height="50"/>
+                                <rect key="frame" x="16" y="592" width="343" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="U5H-yQ-AyP"/>
+                                    <constraint firstAttribute="height" constant="55" id="U5H-yQ-AyP"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="titleLabel" value="Already saving? Sign in"/>
@@ -207,16 +207,16 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I agree to Koupon's" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYE-W1-JJx">
-                                <rect key="frame" x="93" y="312" width="189" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <rect key="frame" x="88" y="312" width="199" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IDR-zM-wWD" customClass="Checkbox" customModule="Koupgon" customModuleProvider="target">
-                                <rect key="frame" x="16" y="312" width="45" height="45"/>
+                                <rect key="frame" x="16" y="312" width="40" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="45" id="C3X-XR-NYz"/>
-                                    <constraint firstAttribute="height" constant="45" id="RRL-hs-Xm1"/>
+                                    <constraint firstAttribute="width" constant="40" id="C3X-XR-NYz"/>
+                                    <constraint firstAttribute="height" constant="40" id="RRL-hs-Xm1"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
@@ -248,18 +248,18 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End User License Agreement" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="595-WY-AK9">
-                                <rect key="frame" x="93" y="340" width="187" height="17"/>
+                                <rect key="frame" x="88" y="337.5" width="164" height="14.5"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES"/>
                                 </accessibility>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4In-pW-n6i" customClass="Button" customModule="Koupgon" customModuleProvider="target">
-                                <rect key="frame" x="16" y="389" width="343" height="50"/>
+                                <rect key="frame" x="16" y="384" width="343" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="T8F-vq-AgD"/>
+                                    <constraint firstAttribute="height" constant="55" id="T8F-vq-AgD"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -297,9 +297,9 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jRa-Fx-35J" customClass="Button" customModule="Koupgon" customModuleProvider="target">
-                                <rect key="frame" x="16" y="524" width="343" height="50"/>
+                                <rect key="frame" x="16" y="524" width="343" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Zs1-VG-e3K"/>
+                                    <constraint firstAttribute="height" constant="55" id="Zs1-VG-e3K"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -332,7 +332,7 @@
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.070588235289999995" green="0.41960784309999999" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="i00-qE-L16" secondAttribute="leading" id="2UG-he-nWK"/>
                             <constraint firstItem="IDR-zM-wWD" firstAttribute="top" secondItem="JNf-CL-2E9" secondAttribute="bottom" constant="32" id="30t-ZC-vMc"/>
@@ -606,9 +606,9 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PO6-OK-HIt" customClass="Button" customModule="Koupgon" customModuleProvider="target">
-                                <rect key="frame" x="16" y="240" width="343" height="50"/>
+                                <rect key="frame" x="16" y="240" width="343" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="VM9-Fh-yrY"/>
+                                    <constraint firstAttribute="height" constant="55" id="VM9-Fh-yrY"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -633,29 +633,29 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yiW-Qg-sJY">
-                                <rect key="frame" x="16" y="332" width="154" height="1"/>
+                                <rect key="frame" x="16" y="337" width="154" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="5Ad-mz-qqV"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Or" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0o-Sj-pcW">
-                                <rect key="frame" x="178" y="322" width="19" height="21"/>
+                                <rect key="frame" x="178" y="327" width="19" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P2j-s0-sQE">
-                                <rect key="frame" x="205" y="332" width="154" height="1"/>
+                                <rect key="frame" x="205" y="337" width="154" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="EmZ-P7-QXy"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qyw-zL-2rD" customClass="Button" customModule="Koupgon" customModuleProvider="target">
-                                <rect key="frame" x="16" y="375" width="343" height="50"/>
+                                <rect key="frame" x="16" y="380" width="343" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="kdr-IH-j6u"/>
+                                    <constraint firstAttribute="height" constant="55" id="kdr-IH-j6u"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -681,9 +681,9 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vS3-ad-ZiM" customClass="Button" customModule="Koupgon" customModuleProvider="target">
-                                <rect key="frame" x="16" y="503" width="343" height="50"/>
+                                <rect key="frame" x="16" y="493" width="343" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="ggQ-F8-yil"/>
+                                    <constraint firstAttribute="height" constant="55" id="ggQ-F8-yil"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -708,9 +708,9 @@
                                 </connections>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kxG-Lm-mMh" customClass="Button" customModule="Koupgon" customModuleProvider="target">
-                                <rect key="frame" x="16" y="585" width="343" height="50"/>
+                                <rect key="frame" x="16" y="580" width="343" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="WjV-jD-uMw"/>
+                                    <constraint firstAttribute="height" constant="55" id="WjV-jD-uMw"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -735,7 +735,7 @@
                                 </connections>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.50196081400000003" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.070588235294117646" green="0.41960784313725491" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="leadingMargin" secondItem="PO6-OK-HIt" secondAttribute="leading" id="01q-HI-uOK"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vS3-ad-ZiM" secondAttribute="trailing" id="4Zd-E5-bSc"/>
