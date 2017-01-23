@@ -19,6 +19,8 @@ class MainNavigationController: UINavigationController, WelcomeViewControllerDel
         
         // Config default navigation bar
         navigationBar.barTintColor = .white
+        let titleFont = UIFont(name: "Avenir Next", size: 17)
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.black, NSFontAttributeName: titleFont!]
         
         // Jump to Browse if logged in
         ((FIRAuth.auth()?.currentUser) != nil) ? welcomeBack() : welcome()

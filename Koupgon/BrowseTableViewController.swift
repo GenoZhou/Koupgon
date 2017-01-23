@@ -32,6 +32,7 @@ class BrowseTableViewController: UIViewController, AlertInjectable, UITableViewD
         
         // Config toolbar
         let toolbarButtonItem1 = UIBarButtonItem(title: storeName, style: .plain, target: self, action: #selector(didTapSelectStoreBarButtonItem))
+        toolbarButtonItem1.setTitleTextAttributes([NSFontAttributeName: UIFont(name: "Avenir Next", size: 16)!], for: .normal)
         let toolbarButtonItem2 = UIBarButtonItem(image: #imageLiteral(resourceName: "arrowRight"), style: .plain, target: self, action: #selector(didTapSelectStoreBarButtonItem))
         toolbar.setItems([toolbarButtonItem1, toolbarButtonItem2], animated: false)
         

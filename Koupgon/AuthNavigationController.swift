@@ -26,7 +26,8 @@ class AuthNavigationController: UINavigationController, SigninViewControllerDele
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
         navigationBar.tintColor = .white
-        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        let titleFont = UIFont(name: "Avenir Next", size: 17)
+        navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: titleFont!]
     }
     
     // MARK: - SigninViewControllerDelegate

@@ -26,7 +26,7 @@ class Toast: UIView {
         titleLabel.trailingAnchor.constraint(equalTo: layoutMarginsGuide.trailingAnchor).isActive = true
         titleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
         
-        titleLabel.font = titleLabel.font.withSize(16)
+        titleLabel.font = UIFont(name: "Avenir Next", size: 16)
         titleLabel.layer.opacity = 0.8
         titleLabel.textAlignment = .center
     }
